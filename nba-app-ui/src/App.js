@@ -6,7 +6,6 @@ import ChooseTeam from "./components/chooseTeam";
 import UserDashboard from "./components/userDashboard";
 import LandingPage from "./components/LandingPage";
 import Footer from "./components/Footer/Footer";
-import PrivateRoutes from "./components/PrivateRoutes";
 
 function App() {
   return (
@@ -15,10 +14,8 @@ function App() {
         <Route exact path="/" element={<LandingPage />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>
-        <Route element={<PrivateRoutes />}>
-          <Route path="/teamselect" element={<ChooseTeam/>}/>
-          <Route path="/dashboard" element={<UserDashboard />}/>
-        </Route>
+        <Route path="/teamselect" element={<ChooseTeam/>}/>
+        <Route path="/dashboard" element={<UserDashboard />}/>
       </Routes>
       <Footer />
     </Router>
